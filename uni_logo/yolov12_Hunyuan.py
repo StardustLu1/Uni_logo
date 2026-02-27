@@ -29,8 +29,7 @@ def safe_print(s):
         print(s)
 
 # 初始化 YOLO 模型
-# yolo_model = YOLO("./runs/detect/school_logo_yolov125/weights/best.pt")
-yolo_model = YOLO("./runs/train/school_logo_yolov124/weights/best.pt")
+yolo_model = YOLO("./runs/train/../best.pt")
 
 def ask_hunyuan(school_abbr: str):
     school_name = LABEL_TO_SCHOOL_NAME.get(school_abbr.lower(), school_abbr)
@@ -278,3 +277,4 @@ def run_web():
 
 if __name__ == "__main__":
     app()
+
